@@ -1,12 +1,23 @@
-# React + Vite
+project overview : 
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This is a modern, responsive website built with a focus on animations, interactive elements, and clean UI. The project demonstrates my skills in frontend development using contemporary tools and libraries.
 
-Currently, two official plugins are available:
+Features : 
+ Fully adaptable layout for mobile, tablet, and desktop screens.
+ Smooth and customizable animations for UI elements.
+Integrated web fonts for better aesthetics and readability.
+ Structured layout with semantic HTML and modern CSS practices.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Tech Stack
 
-## Expanding the ESLint configuration
+REACT
+TAILWIND CSS
+JAVASCRIPT
+HTML
+CSS
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+Google fonts , react-icons , material UI , openAI , font awesome.
+
+
+
+

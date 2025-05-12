@@ -15,7 +15,7 @@ const Chatwidget = () => {
 //   const APIKEY = process.env.API_KEY;
 
 
-  // UseEffect to trigger API call when new user message is added
+ 
   useEffect(() => {
     if (messages[messages.length - 1]?.sender === "user") {
       handleSend(); // Call the send function when the message is added
@@ -23,20 +23,20 @@ const Chatwidget = () => {
   }, [messages]);
 
   const handleSend = async () => {
-    if (!userMsg.trim()) return; // Ignore empty messages
-    if (cooldown) return; // Prevent sending if on cooldown
+    if (!userMsg.trim()) return;
+    if (cooldown) return; 
 
     setCooldown(true);
-    setTimeout(() => setCooldown(false), 5000); // Cooldown for 5 seconds
+    setTimeout(() => setCooldown(false), 5000); 
 
     const newMessages = [...messages, { sender: "user", text: userMsg }];
-    setMessages(newMessages); // Update the message list with the user message
+    setMessages(newMessages); 
     setUserMsg("");
     setLoading(true);
-    setErrorMessage(""); // Clear any previous error messages
+    setErrorMessage(""); 
 
     try {
-      // === Replace with OpenAI API call if necessary ===
+      
       const response = await axios.post(
         "https://api.openai.com/v1/chat/completions",
         {
@@ -51,7 +51,7 @@ const Chatwidget = () => {
         },
         {
           headers: {
-            Authorization: `Bearer ${APIKEY}`, // Use your OpenAI API Key
+            Authorization: `Bearer ${APIKEY}`, 
           },
         }
       );
@@ -63,7 +63,7 @@ const Chatwidget = () => {
       ]);
     } catch (error) {
       if (error.response && error.response.status === 429) {
-        // If the error status is 429, inform the user to wait
+       
         setErrorMessage("Too many requests. Please wait 5 minutes and try again.");
       } else {
         console.error("Error calling API:", error);
